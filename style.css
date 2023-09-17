@@ -96,6 +96,65 @@ form {
     border: #818db3;
     background-color: #c1c6d4;
 }
+main #album #photo img {
+    width: 40px;
+    height: 40px;
+}
+
+#album ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative; /* Set the parent to relative positioning */
+}
+
+#album li {
+    flex: 0 0 calc(33.33% - 20px); /* Adjust the width as needed */
+    text-align: center;
+    position: relative; /* Set the list item to relative positioning */
+}
+
+#album img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    padding-top: 100;
+}
+
+.caption {
+    margin: 10px 0;
+    font-size: 20px;
+    position: absolute; /* Set the caption to absolute positioning */
+    left: 0; /* Adjust the left position */
+    bottom: -50; /* Adjust the bottom position */
+    color: #000;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+.discription {
+    margin: 10px 0;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    bottom: 100;
+    background-color: rgba(235, 235, 235, 0.7);
+    color: #000;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    visibility: hidden; /* Initially hide the description */
+    opacity: 0; /* Initially set opacity to 0 for smooth transition */
+    transition: visibility 0s, opacity 0.5s;
+}
+
+#album li:hover p {
+    visibility: visible; /* Show description on hover */
+    opacity: 1; /* Fade in the description */
+}
+
 footer {
     height: 40px;
     background-color: antiquewhite;
